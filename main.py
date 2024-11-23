@@ -16,7 +16,7 @@ for j in range(nbrJour):
         remboursement+=TotalRembouresement(montant,type)
         stock+=TotalAchat(montant,type)
         espece+=TotalEspece(montant,mode)
-        carte+=TotalCarte(montant,mode)
+        carte+=TotalCarte(montant,mode) 
     solde+=espece
     """ Tv=carte-vente
     vente+=Tv """
