@@ -3,9 +3,10 @@ distance={('Dakar','Bakel'):663,('Bakel','Kedougou'):483,('Kedougou','Kolda'):44
 def convert_dict_to_list(distances,CalculDistance=False,Trie=False):
     #question numero 3
     if(Trie is True):
-        D=dict(distances)
-        sorted(D)
-        return list(D.items())
+        NewDic = [(Distance, ville) for ville,Distance in distances.items()]
+        NewDic.sort(reverse=True)
+        NewDic =[(ville,Distance) for Distance,ville in NewDic]
+        return dict(NewDic)
     
     #question numero 2
     if(CalculDistance is True):
